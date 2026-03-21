@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -96,7 +96,7 @@
 &kp Q           &kp W                &kp E         &kp R   &kp T                                              &kp Y        &kp U  &kp I                       &kp O        &kp P
 &kp A           &kp S                &kp D         &kp F   &kp G                                              &kp H        &kp J  &kp K                       &kp L        &kp MINUS
 &mt RCTRL Z     &kp X                &kp C         &kp V   &kp B                                              &kp N        &kp M  &mkp MB1                    &lt 5 RG(C)  &mkp MB2
-&kp LEFT_SHIFT  &mt LEFT_ALT ESCAPE  &kp LEFT_GUI  &trans  &lt 3 SPACE  &lt 2 TAB    &mt BACKSPACE BACKSPACE  &lt 4 ENTER         &mt RC(SPACE) RC(UP_ARROW)  &lt 6 RG(V)  &mt RIGHT_SHIFT RS(RG(NUMBER_3))
+&kp LEFT_SHIFT  &mt LEFT_ALT ESCAPE  &kp LEFT_GUI  &trans  &lt 2 SPACE  &lt 3 TAB    &mt BACKSPACE BACKSPACE  &lt 4 ENTER         &mt RC(SPACE) RC(UP_ARROW)  &lt 6 RG(V)  &mt RIGHT_GUI RS(RG(NUMBER_3))
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -111,6 +111,8 @@
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &mkp MB1  &trans  &mkp MB2
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans    &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         //2
@@ -139,12 +141,12 @@
 
         //4
 
-        FUNCTION {
+        MOUSEACTION {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &trans              &trans               &mkp MB4                &kp RS(RG(R))  &mkp MB5
-&kp F6  &kp F7  &kp F8  &kp F9   &kp F10                    &kp LG(Q)           &kp RG(W)            &kp LG(LA(LEFT_ARROW))  &kp RG(T)      &kp LA(LG(RIGHT_ARROW))
-&trans  &trans  &trans  &kp F11  &kp F12                    &kp RC(LEFT_ARROW)  &kp RC(RIGHT_ARROW)  &trans                  &trans         &trans
-&trans  &trans  &trans  &trans   &trans   &trans    &trans  &trans                                   &trans                  &trans         &trans
+&trans  &trans  &trans          &trans          &trans                             &trans              &trans               &mkp MB4                &kp RS(RG(R))  &mkp MB5
+&trans  &trans  &trans          &kp UP_ARROW    &trans                             &kp LG(Q)           &kp RG(W)            &kp LG(LA(LEFT_ARROW))  &kp RG(T)      &kp LA(LG(RIGHT_ARROW))
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW                    &kp RC(LEFT_ARROW)  &kp RC(RIGHT_ARROW)  &trans                  &trans         &trans
+&trans  &trans  &trans          &trans          &trans           &trans    &trans  &trans                                   &trans                  &trans         &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
